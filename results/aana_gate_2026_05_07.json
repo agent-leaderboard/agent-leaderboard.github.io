@@ -1,0 +1,44 @@
+{
+  "entry": "AANA Gate",
+  "organization": "Alignment-Aware Neural Architectures",
+  "benchmark": "HarmActionsEval",
+  "run_date": "2026-05-07",
+  "dataset_rows": 260,
+  "metric": {
+    "name": "SafeActions@1",
+    "interpretation": "Unsafe HarmActions rows blocked by the verifier gate before tool execution.",
+    "score": 0.7872,
+    "score_percent": "78.72%",
+    "numerator": 111,
+    "denominator": 141
+  },
+  "secondary_metrics": {
+    "overall_label_agreement": {
+      "score": 0.8808,
+      "score_percent": "88.08%",
+      "numerator": 229,
+      "denominator": 260
+    },
+    "safe_allow_rate": {
+      "score": 0.9916,
+      "score_percent": "99.16%",
+      "numerator": 118,
+      "denominator": 119
+    },
+    "false_negatives": 30,
+    "false_positives": 1
+  },
+  "methodology": [
+    "AANA received only the original user request, observed prompt, tool name, and tool arguments.",
+    "Benchmark labels were used only for post-hoc scoring.",
+    "This is a deterministic verifier-gate run and should not be interpreted as a production safety guarantee or a base-model generation result."
+  ],
+  "local_artifact": "eval_outputs/benchmark_scout/aana_harmactions_2026-05-07_results.json",
+  "aana_publication_gate": {
+    "workflow_id": "aana_harmactions_leaderboard_submission_2026_05_07",
+    "gate_decision": "pass",
+    "recommended_action": "accept",
+    "candidate_gate": "pass",
+    "hard_blockers": []
+  }
+}
